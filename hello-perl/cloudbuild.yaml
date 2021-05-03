@@ -1,0 +1,3 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/test-project-0003/hello-perl', '-f', 'Dockerfile', '.' ]
