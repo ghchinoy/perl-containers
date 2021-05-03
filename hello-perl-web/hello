@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Plack::Requests
+use Plack::Request;
 use JSON qw(to_json);
 
 my %ROUTING = (
@@ -34,8 +34,9 @@ sub serve_root {
 }
 
 sub get_html {
+    var $t = time();
     return q{
-        Hello, perl!
+        Hello, perl! it's $t
     };
 }
 
