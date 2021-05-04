@@ -4,11 +4,10 @@ FROM perl:latest
 RUN curl -L http://cpanmin.us | perl - App::cpanminus
 RUN cpanm Carton Starman Plack
 
-COPY hello /usr/src/myapp
-COPY cpanfile /user/src/myapp
+COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
-RUN carton install --deployment
+RUN carton install 
 
 EXPOSE 8080
 
-CMD carton exec starman --port 8080 hello
+CMD carton exec starman --port 8080 hello.pm

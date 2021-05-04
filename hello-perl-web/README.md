@@ -20,5 +20,7 @@ export PROJECT_ID=$(gcloud info --format='value(config.project)')
 docker run -it -p 8080:8080 gcr.io/$PROJECT_ID/hello-perl
 ```
 
-Then go to localhost:8080 (or wherever) `/cgi-bin/hello` (note for this, I removed the `.pl` from the sourcefile in order to obfuscate that it's perl in the URL)
+Then go to localhost:8080 and see the HTML.
+
+also `/echo?field=hello` will give back JSON.
 

@@ -6,7 +6,7 @@ use Plack::Request;
 use JSON qw(to_json);
 
 my %ROUTING = (
-    '/' => \&serve_root,
+    '/'     => \&serve_root,
     '/echo' => \&serve_echo,
 );
 
@@ -22,7 +22,7 @@ my $app = sub {
         [ 'Content-Type' => 'text/html' ],
         [ '404 Not Found' ],
     ];
-}
+};
 
 sub serve_root {
     my $html = get_html();
@@ -34,8 +34,8 @@ sub serve_root {
 }
 
 sub get_html {
-    var $t = time();
-    return q{
+    my $t = localtime();
+    return qq{
         Hello, perl! it's $t
     };
 }
@@ -45,7 +45,7 @@ sub serve_echo {
     my $request = Plack::Request->new($env);
     my $data;
     if ($request->param('field')) {
-        $data = { txt => 'You said: ' . $request->param('field') };
+        $data = { text => 'You said: ' . $request->param('field') };
     }
     return [
         '404',
