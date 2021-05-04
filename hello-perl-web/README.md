@@ -7,7 +7,7 @@ The `cloudbuild.yaml` builds a container image, pushes that container image to a
 This uses modern perl constructs (no Apache + CGI):
 
 * [PSGI/Plack](https://plackperl.org/)
-* [cpanm](https://metacpan.org/pod/App::cpanminus#INSTALL) - a package manager for Perl/CPAN
+* [cpanm](https://metacpan.org/pod/App::cpanminus#INSTALL),  a package manager for Perl/CPAN
 * [carton](https://metacpan.org/pod/Carton), another CPAN package manager
 * [starman](https://metacpan.org/pod/Starman), Webserver in perl.
 
