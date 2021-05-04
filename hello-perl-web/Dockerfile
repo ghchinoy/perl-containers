@@ -1,6 +1,5 @@
 FROM perl:latest
 
-# https://github.com/miyagawa/cpanminus
 RUN curl -L http://cpanmin.us | perl - App::cpanminus
 RUN cpanm Carton Starman Plack
 
