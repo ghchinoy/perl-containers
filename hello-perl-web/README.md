@@ -9,7 +9,7 @@ This uses modern perl constructs (no Apache + CGI):
 * [PSGI/Plack](https://plackperl.org/)
 * [cpanm](https://metacpan.org/pod/App::cpanminus#INSTALL),  a package manager for Perl/CPAN
 * [carton](https://metacpan.org/pod/Carton), another CPAN package manager
-* [starman](https://metacpan.org/pod/Starman), Webserver in perl.
+* [starman](https://metacpan.org/pod/Starman), Webserver in perl
 
 
 ## Build and Deploy with Cloud Build
